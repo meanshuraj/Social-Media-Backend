@@ -23,7 +23,7 @@ import dotenv from "dotenv"
 //and also add "-r dotenv/config --experimental-json-modules" in package.json in dev after nodemon as experimental features
 import connectDB from "./db/index.js"
 dotenv.config({
-    path: './env'
+    path: './.env'
 })
 import app from "./app.js"
 
