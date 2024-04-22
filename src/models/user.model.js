@@ -28,7 +28,7 @@ const userSchema=new Schema({
         type:String,//cloudinary url
         required:true,
     },
-    converImage:{
+    coverImage:{
         type:String,
     },
     watchHistory:[
@@ -51,7 +51,7 @@ const userSchema=new Schema({
 )
 
 userSchema.pre("save",async function(next){
-    if(!this.isModfied("password")) return next();
+    if(!this.isModified("password")) return next();
     this.password=await bcrypt.hash(this.password,10);
     next();
 });
