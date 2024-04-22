@@ -22,7 +22,7 @@ const userSchema=new Schema({
         type:String,
         required:true,
         trim:true,
-        index:true
+        index:true,
     },
     avatar:{
         type:String,//cloudinary url
@@ -46,7 +46,7 @@ const userSchema=new Schema({
     }
 },
 {
-    timeseries:true
+    timestamps:true
 }
 )
 
